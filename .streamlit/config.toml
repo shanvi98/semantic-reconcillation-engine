@@ -1,0 +1,15 @@
+# The dashboard ships its own design system (src/reconciler/ui/theme.py).
+# These values align Streamlit's own chrome with it so the two do not fight.
+[theme]
+base = "dark"
+primaryColor = "#5B8CFF"
+backgroundColor = "#0A0E1A"
+secondaryBackgroundColor = "#111726"
+textColor = "#E8ECF6"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

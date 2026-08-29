@@ -1,0 +1,5 @@
+# Overridden by env vars RECON_USE_REAL_LLM / RECON_USE_REAL_EMBEDDINGS / RECON_LLM_MODEL
+llm_model: claude-haiku-4-5-20251001
+use_real_llm: false
+embedding_model: all-MiniLM-L6-v2
+use_real_embeddings: true

@@ -1,0 +1,15 @@
+{
+  "key": "batch1",
+  "label": "Batch 1 \u00b7 Standard",
+  "description": "The reference month. 60 invoices with ordinary noise \u2014 this is the batch every number in the demo script was measured against.",
+  "params": {
+    "n_records": 60,
+    "seed": 42
+  },
+  "counts": {
+    "invoices": 60,
+    "settlements": 57,
+    "bank": 63,
+    "closeable_triangles": 53
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "key": "batch3",
+  "label": "Batch 3 \u00b7 Scale",
+  "description": "A big month. 300 invoices, roughly 900 records across the three ledgers \u2014 the batch to select when someone asks whether it holds up beyond a toy dataset.",
+  "params": {
+    "n_records": 300,
+    "seed": 42
+  },
+  "counts": {
+    "invoices": 300,
+    "settlements": 279,
+    "bank": 265,
+    "closeable_triangles": 255
+  }
+}

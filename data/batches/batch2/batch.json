@@ -1,0 +1,19 @@
+{
+  "key": "batch2",
+  "label": "Batch 2 \u00b7 High exceptions",
+  "description": "A bad month. A quarter of invoices never settle, a fifth of settlements never reach the bank, and the statement is full of unrelated credits. Match rate falls; the engine still finds everything findable.",
+  "params": {
+    "n_records": 60,
+    "seed": 7,
+    "pending_settlement_rate": 0.25,
+    "in_transit_rate": 0.2,
+    "dispute_rate": 0.2,
+    "bank_noise_records": 30
+  },
+  "counts": {
+    "invoices": 60,
+    "settlements": 41,
+    "bank": 63,
+    "closeable_triangles": 33
+  }
+}
