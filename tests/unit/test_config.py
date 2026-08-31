@@ -19,6 +19,25 @@ def _yaml(tmp_path: Path, body: str) -> Path:
     return path
 
 
+@pytest.fixture(autouse=True)
+def _clean_recon_env(monkeypatch):
+    """CI sets RECON_USE_REAL_LLM/RECON_USE_REAL_EMBEDDINGS globally so the
+    rest of the suite runs the offline stack. Left in place, those ambient
+    vars would silently outrank the YAML values these tests set, since env
+    beats YAML by design. Tests that care about env precedence set it back
+    explicitly via monkeypatch.setenv."""
+    for key in (
+        "RECON_USE_REAL_LLM",
+        "RECON_USE_REAL_EMBEDDINGS",
+        "RECON_LLM_MODEL",
+        "RECON_EMBEDDING_MODEL",
+        "RECON_DATA_RAW_DIR",
+        "RECON_DATA_PROCESSED_DIR",
+        "RECON_DATA_OUTPUTS_DIR",
+    ):
+        monkeypatch.delenv(key, raising=False)
+
+
 def test_defaults_are_offline_safe():
     """The default stack must never require an API key: a fresh clone should
     run green with no credentials and no network."""
